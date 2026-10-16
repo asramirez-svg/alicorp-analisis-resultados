@@ -72,4 +72,7 @@ powerbi/                   dashboard (.pbix y .pdf)
 
 *Proyecto personal con información pública. No está afiliado a Alicorp y no es una recomendación de inversión.*
 
+## Otros proyectos
+Parte de mi portafolio de análisis de datos: [github.com/asramirez-svg](https://github.com/asramirez-svg)
+
 **Autor:** Augusto Set Ramírez Ames: analista de datos, IBM Data Analyst Professional Certificate. [LinkedIn](https://linkedin.com/in/AugustoRamirezA)
