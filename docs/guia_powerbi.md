@@ -1,10 +1,10 @@
 # Guía paso a paso — Dashboard de Alicorp en Power BI
 
-Objetivo: armar un dashboard de 4 páginas con `data/processed/alicorp_powerbi.xlsx`. Cada paso practica una habilidad que evalúa el examen **PL-300**; la etiqueta [PL-300] dice cuál.
+Objetivo: armar un dashboard de 6 páginas con `data/processed/alicorp_powerbi.xlsx`. Cada paso practica una habilidad que evalúa el examen **PL-300**; la etiqueta [PL-300] dice cuál.
 
 ## 1. Cargar los datos [PL-300: Preparar los datos]
 1. Power BI Desktop → **Inicio → Obtener datos → Libro de Excel** → elige `alicorp_powerbi.xlsx`.
-2. Marca las 4 hojas: `fact_unidades`, `fact_consolidado`, `fact_deuda`, `dim_trimestre` → **Transformar datos**.
+2. Marca las 6 hojas: `fact_unidades`, `fact_consolidado`, `fact_deuda`, `dim_trimestre`, `descomposicion_precio_vol`, `estacionalidad_trimestral` → **Transformar datos**.
 3. En Power Query revisa los tipos de cada columna:
    - texto: `trimestre`, `unidad`, `moneda`, `fuente`;
    - número decimal: todos los montos;
@@ -23,6 +23,8 @@ Ve a la vista **Modelo** y crea estas relaciones (uno a varios, filtro en una di
 | `dim_trimestre[trimestre]` | `fact_consolidado[trimestre]` |
 | `dim_trimestre[trimestre]` | `fact_deuda[trimestre]` |
 | `dim_unidad[unidad]` | `fact_unidades[unidad]` |
+
+`descomposicion_precio_vol` y `estacionalidad_trimestral` quedan **sin relación** con el resto del modelo: ya vienen agregadas (una fila por unidad, o una fila por Q1-Q4), no por trimestre individual, así que no encajan en el esquema estrella. Se usan solas en su propia página.
 
 Luego ajusta el orden de las etiquetas:
 - En `dim_trimestre`, selecciona `etiqueta` → **Herramientas de columnas → Ordenar por columna → orden**. Si no lo haces, "1T25" aparece antes que "4T24".
@@ -68,6 +70,15 @@ RETURN CALCULATE ( SUM ( fact_deuda[deuda_financiera_neta] ), fact_deuda[trimest
 Deuda neta / EBITDA =
 VAR ultimo = MAX ( fact_deuda[trimestre] )
 RETURN CALCULATE ( SUM ( fact_deuda[deuda_neta_ebitda_x] ), fact_deuda[trimestre] = ultimo )
+
+-- Descomposición precio-volumen (tabla ya agregada, no hace falta CALCULATE)
+Efecto precio = SUM ( descomposicion_precio_vol[efecto_precio_pen] )
+Efecto volumen = SUM ( descomposicion_precio_vol[efecto_volumen_pen] )
+Efecto interacción = SUM ( descomposicion_precio_vol[efecto_cruzado_pen] )
+
+-- Estacionalidad (tabla ya agregada por Q1-Q4)
+Margen EBITDA promedio trimestre = SUM ( estacionalidad_trimestral[margen_ebitda_prom] )
+Margen neta promedio trimestre = SUM ( estacionalidad_trimestral[margen_neta_prom] )
 ```
 
 Formato:
@@ -104,6 +115,11 @@ Formato:
 **Página 5 — Notas de datos** (muy valorada en entrevistas)
 - Tabla con `trimestre`, `unidad`, `moneda` y `fuente`.
 - Texto que explique la re-expresión de 2025, el 3T25 derivado y la conversión de dólares con el tipo de cambio del BCRP.
+
+**Página 6 — Precio vs. volumen y estacionalidad** (el análisis avanzado)
+- Gráfico de barras apiladas horizontales: Efecto precio, Efecto volumen y Efecto interacción por `descomposicion_precio_vol[unidad]` (replica `img/05_descomposicion_precio_volumen.png`, pero interactivo).
+- Gráfico de columnas + línea (dos ejes, única excepción a la regla de "sin doble eje" porque son unidades distintas — % ambos, pero de cosas distintas): Margen EBITDA promedio trimestre (columnas) y Margen neta promedio trimestre (línea) por `estacionalidad_trimestral[etiqueta]`.
+- Cuadro de texto: por qué el margen EBITDA es parejo pero la utilidad neta se hunde en Q4 (partidas no recurrentes de cierre de año).
 
 ## 5. Diseño
 - Una paleta: azul para la cifra principal; un color fijo por unidad en todas las páginas (Vista → Temas → Personalizar).

@@ -48,12 +48,24 @@ Guía de construcción: [docs/guia_powerbi.md](docs/guia_powerbi.md) · Archivo:
 
 ![Deuda neta](img/04_deuda_neta.png)
 
+## Análisis avanzado: ¿por qué crecieron las ventas, y por qué son tan malos los 4T?
+Dos preguntas que el análisis inicial dejaba solo cualitativas, ahora cuantificadas:
+
+**¿El crecimiento de 2025 vino de vender más caro o de vender más?** Descomposición precio-volumen por unidad de negocio (ver [docs/hallazgos.md](docs/hallazgos.md#7-el-crecimiento-de-2025-fue-casi-todo-volumen-no-precio)): en Vitapro y Consumo Masivo Perú, el efecto precio fue **negativo** — todo el crecimiento fue volumen.
+
+![Descomposición precio-volumen](img/05_descomposicion_precio_volumen.png)
+
+**¿Los 4T son realmente peores, o fue casualidad de 2 años?** Promediando cada trimestre (Q1-Q4) con los años disponibles: el margen EBITDA es parejo todo el año (~15 %), pero el margen de utilidad neta se desploma a **−2.8 % en Q4**, por partidas no recurrentes de cierre de año (ver [docs/hallazgos.md](docs/hallazgos.md#8-los-cuartos-trimestres-son-sistemáticamente-peores-en-utilidad-neta-no-en-ebitda)).
+
+![Estacionalidad](img/06_estacionalidad_margen.png)
+
 ## Cómo reproducirlo
 ```bash
 pip install -r requirements.txt
 python src/01_construir_dataset.py   # genera data/processed/*.csv y alicorp_powerbi.xlsx
 python src/02_validar.py             # chequea sumas contra los totales publicados
 python src/03_graficos.py            # genera los gráficos de img/
+python src/04_analisis_avanzado.py   # descomposición precio-volumen + estacionalidad
 ```
 
 ## Estructura

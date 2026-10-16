@@ -32,11 +32,28 @@ Todas las cifras están en S/ millones salvo que se indique otra cosa. "EBITDA a
 - El apalancamiento subió de **1,83x a 2,18x**. Eso significa que la deuda equivale a poco más de 2 años de EBITDA.
 - Sigue en un rango manejable, pero la tendencia es a subir.
 
+## 7. El crecimiento de 2025 fue casi todo volumen, no precio
+Descomponiendo el cambio en ventas de 2025 vs 2024 en efecto precio y efecto volumen (cuánto del cambio viene de cobrar distinto vs. de vender más toneladas):
+- **Vitapro:** +S/ 678 M en ventas, pero el efecto precio fue **negativo** (−S/ 315 M) — todo el crecimiento vino de vender más toneladas (+S/ 1 107 M por volumen). Cada tonelada se vendió más barata que en 2024.
+- **Negocios Internacionales:** cayó S/ 231 M, y el 90 % de esa caída es efecto precio (−S/ 208 M), no menos toneladas vendidas — coherente con el cambio de tipo de cambio de Bolivia (punto 4).
+- **Consumo Masivo Perú:** su crecimiento (+S/ 151 M, solo 3.9 %) también es puro volumen; el efecto precio fue negativo (−S/ 140 M), otra señal de que la mezcla de productos se movió hacia lo más barato.
+- **Alicorp Soluciones (B2B):** es la única unidad con efecto precio y efecto volumen positivos a la vez — creció de forma más "sana".
+- **Por qué importa:** confirma con números (no solo con el argumento cualitativo del punto 1) que ninguna unidad está subiendo precios reales — el crecimiento depende de vender más.
+
+## 8. Los cuartos trimestres son sistemáticamente peores en utilidad neta, no en EBITDA
+Promediando cada posición trimestral (Q1, Q2, Q3, Q4) con los años disponibles (2024-2026):
+- El **margen EBITDA ajustado es parejo** todo el año: 14.8 % en Q1 hasta 15.7 % en Q3 — no hay estacionalidad operativa real.
+- El **margen de utilidad neta se desploma en Q4**: pasa de +5 % a +7 % en Q1-Q3 a **−2.8 % en promedio en Q4**.
+- La causa es contable, no operativa: las partidas no recurrentes promedian **S/ 205 M en Q4**, muy por encima de los S/ 6-18 M de los otros trimestres — es cuando Alicorp registra los deterioros y ajustes de cierre de año.
+- **Por qué importa:** si alguien proyecta el 4T26 solo mirando el EBITDA, va a sobreestimar la utilidad neta — hay que presupuestar una partida no recurrente de cierre de año, no asumir que no va a pasar.
+
 ## Qué haría un analista con esto (recomendaciones)
 1. Seguir el **margen EBITDA de Vitapro** cada trimestre, porque es la unidad más volátil y la que más movió el resultado.
 2. Medir el crecimiento de Consumo Masivo Perú **sin las adquisiciones** (orgánico) para saber si las marcas propias crecen solas.
 3. No comparar Negocios Internacionales 2024 con 2025 sin advertir el cambio de tipo de cambio.
 4. Vigilar que la deuda neta / EBITDA no pase de ~2,5x mientras se integran las adquisiciones.
+5. Al proyectar un 4T, presupuestar una partida no recurrente (el promedio histórico es ~S/ 200 M), no asumir que el margen EBITDA se traduce directo a utilidad neta.
+6. Para cualquier unidad, revisar si el crecimiento de ventas es por precio o por volumen antes de celebrarlo — en 2025 casi todo fue volumen, lo que es más frágil ante una baja de demanda.
 
 ## Límites del análisis
 - Los datos vienen de reportes trimestrales públicos, no de la contabilidad interna de Alicorp.
