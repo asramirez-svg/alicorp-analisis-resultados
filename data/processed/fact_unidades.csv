@@ -1,0 +1,41 @@
+﻿trimestre,unidad,volumen_miles_tm,ventas,utilidad_bruta,ebitda_ajustado,moneda,fuente,tc_promedio_pen_usd,ventas_pen,utilidad_bruta_pen,ebitda_ajustado_pen,comparable_con_2024
+2024-Q1,Consumo Masivo Perú,136.0,884.3,344.2,204.0,PEN,ER 1T25,3.7592,884.3,344.2,204.0,True
+2024-Q2,Consumo Masivo Perú,139.3,909.9,375.7,207.6,PEN,ER 2T25,3.7445,909.9,375.7,207.6,True
+2024-Q3,Consumo Masivo Perú,152.4,981.9,386.2,221.2,PEN,ER 3T25,3.7583,981.9,386.2,221.2,True
+2024-Q4,Consumo Masivo Perú,164.4,1091.3,398.9,228.7,PEN,ER 4T25,3.7563,1091.3,398.9,228.7,True
+2025-Q1,Consumo Masivo Perú,148.6,944.2,357.2,197.9,PEN,ER 1T26 (re-expresado),3.6988,944.2,357.2,197.9,True
+2025-Q2,Consumo Masivo Perú,156.9,960.6,353.3,175.1,PEN,ER 2T26 (re-expresado),3.654,960.6,353.3,175.1,True
+2025-Q3,Consumo Masivo Perú,165.0,1035.2,398.6,206.6,PEN,Derivado: anual 2025 - otros trimestres,3.5337,1035.2,398.6,206.6,True
+2025-Q4,Consumo Masivo Perú,167.7,1078.0,409.1,228.2,PEN,ER 4T25,3.3842,1078.0,409.1,228.2,True
+2026-Q1,Consumo Masivo Perú,167.2,1039.0,414.6,240.5,PEN,ER 1T26,3.387,1039.0,414.6,240.5,True
+2026-Q2,Consumo Masivo Perú,169.1,1068.5,396.9,198.5,PEN,ER 2T26,3.4283,1068.5,396.9,198.5,True
+2024-Q1,Alicorp Soluciones (B2B),142.3,530.1,114.1,67.3,PEN,ER 1T25,3.7592,530.1,114.1,67.3,True
+2024-Q2,Alicorp Soluciones (B2B),159.6,577.9,138.6,86.6,PEN,ER 2T25,3.7445,577.9,138.6,86.6,True
+2024-Q3,Alicorp Soluciones (B2B),190.3,698.7,151.4,98.4,PEN,ER 3T25,3.7583,698.7,151.4,98.4,True
+2024-Q4,Alicorp Soluciones (B2B),215.8,865.0,195.4,125.5,PEN,ER 4T25,3.7563,865.0,195.4,125.5,True
+2025-Q1,Alicorp Soluciones (B2B),192.2,772.8,167.4,98.6,PEN,ER 1T26 (re-expresado),3.6988,772.8,167.4,98.6,True
+2025-Q2,Alicorp Soluciones (B2B),202.0,779.7,166.6,106.1,PEN,ER 2T26 (re-expresado),3.654,779.7,166.6,106.1,True
+2025-Q3,Alicorp Soluciones (B2B),220.2,854.3,187.2,122.4,PEN,Derivado: anual 2025 - otros trimestres,3.5337,854.3,187.2,122.4,True
+2025-Q4,Alicorp Soluciones (B2B),213.8,827.7,173.6,100.5,PEN,ER 4T25,3.3842,827.7,173.6,100.5,True
+2026-Q1,Alicorp Soluciones (B2B),199.2,752.4,165.5,102.7,PEN,ER 1T26,3.387,752.4,165.5,102.7,True
+2026-Q2,Alicorp Soluciones (B2B),204.8,795.3,168.7,99.9,PEN,ER 2T26,3.4283,795.3,168.7,99.9,True
+2024-Q1,Vitapro (Acuicultura),138.1,172.7,17.0,6.1,USD,ER 1T25,3.7592,649.2,63.9,22.9,True
+2024-Q2,Vitapro (Acuicultura),166.3,200.8,23.4,13.4,USD,ER 2T25,3.7445,751.9,87.6,50.2,True
+2024-Q3,Vitapro (Acuicultura),170.3,206.1,29.7,20.7,USD,ER 3T25,3.7583,774.6,111.6,77.8,True
+2024-Q4,Vitapro (Acuicultura),197.6,229.1,40.2,30.8,USD,ER 4T25,3.7563,860.6,151.0,115.7,True
+2025-Q1,Vitapro (Acuicultura),220.3,252.0,47.4,37.2,USD,ER 1T26 (re-expresado),3.6988,932.1,175.3,137.6,True
+2025-Q2,Vitapro (Acuicultura),226.1,258.4,48.1,40.1,USD,ER 2T26 (re-expresado),3.654,944.2,175.8,146.5,True
+2025-Q3,Vitapro (Acuicultura),232.3,265.1,45.9,36.0,USD,Derivado: anual 2025 - otros trimestres,3.5337,936.8,162.2,127.2,True
+2025-Q4,Vitapro (Acuicultura),238.8,266.3,45.0,30.2,USD,ER 4T25,3.3842,901.2,152.3,102.2,True
+2026-Q1,Vitapro (Acuicultura),238.4,259.6,42.5,32.4,USD,ER 1T26,3.387,879.3,143.9,109.7,True
+2026-Q2,Vitapro (Acuicultura),267.8,295.3,47.7,36.3,USD,ER 2T26,3.4283,1012.4,163.5,124.4,True
+2024-Q1,Negocios Internacionales,35.4,244.0,69.8,18.5,PEN,ER 1T25 (tipo de cambio oficial Bolivia),3.7592,244.0,69.8,18.5,True
+2024-Q2,Negocios Internacionales,39.3,268.0,89.4,36.4,PEN,ER 2T25 (tipo de cambio oficial Bolivia),3.7445,268.0,89.4,36.4,True
+2024-Q3,Negocios Internacionales,37.7,274.6,100.8,52.3,PEN,ER 3T25 (tipo de cambio oficial Bolivia),3.7583,274.6,100.8,52.3,True
+2024-Q4,Negocios Internacionales,30.1,62.3,22.8,8.1,USD,ER 4T25 (tipo de cambio oficial Bolivia),3.7563,234.0,85.6,30.4,True
+2025-Q1,Negocios Internacionales,33.3,49.4,13.5,1.0,USD,ER 1T26 (re-expresado),3.6988,182.7,49.9,3.7,False
+2025-Q2,Negocios Internacionales,34.4,47.8,16.7,6.1,USD,ER 2T26 (re-expresado),3.654,174.7,61.0,22.3,False
+2025-Q3,Negocios Internacionales,29.9,51.1,13.6,3.6,USD,Derivado: anual 2025 - otros trimestres,3.5337,180.6,48.1,12.7,False
+2025-Q4,Negocios Internacionales,40.9,74.3,18.9,-0.4,USD,ER 4T25,3.3842,251.4,64.0,-1.4,False
+2026-Q1,Negocios Internacionales,40.4,75.9,19.6,4.1,USD,ER 1T26,3.387,257.1,66.4,13.9,False
+2026-Q2,Negocios Internacionales,42.6,80.9,27.6,14.0,USD,ER 2T26,3.4283,277.3,94.6,48.0,False
