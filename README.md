@@ -44,7 +44,9 @@ Modelo estrella con 3 tablas de hechos (unidades, consolidado, deuda) y 2 dimens
 - participación por unidad;
 - deuda como saldo de cierre.
 
-Guía de construcción: [docs/guia_powerbi.md](docs/guia_powerbi.md) · Archivo: `powerbi/alicorp_dashboard.pbix` *(capturas pendientes)*
+Guía de construcción: [docs/guia_powerbi.md](docs/guia_powerbi.md) · Archivo: `powerbi/alicorp_dashboard.pbix`
+
+![Dashboard - Resumen ejecutivo](img/07_dashboard_resumen_ejecutivo.png)
 
 ![Deuda neta](img/04_deuda_neta.png)
 
