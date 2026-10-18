@@ -46,7 +46,31 @@ Modelo estrella con 3 tablas de hechos (unidades, consolidado, deuda) y 2 dimens
 
 Guía de construcción: [docs/guia_powerbi.md](docs/guia_powerbi.md) · Archivo: `powerbi/alicorp_dashboard.pbix`
 
+El dashboard tiene 6 páginas:
+
+**1. Resumen ejecutivo**: ventas, variación frente al mismo trimestre del año anterior, margen EBITDA y apalancamiento.
+
 ![Dashboard - Resumen ejecutivo](img/07_dashboard_resumen_ejecutivo.png)
+
+**2. Unidades de negocio**: EBITDA ajustado y participación de cada unidad en el EBITDA del grupo.
+
+![Dashboard - Unidades de negocio](img/08_dashboard_unidades_negocio.png)
+
+**3. Calidad de la utilidad**: EBITDA ajustado vs. reportado y utilidad neta por trimestre.
+
+![Dashboard - Calidad de la utilidad](img/09_dashboard_calidad_utilidad.png)
+
+**4. Deuda y adquisiciones**: deuda financiera neta y deuda neta / EBITDA.
+
+![Dashboard - Deuda y adquisiciones](img/10_dashboard_deuda_adquisiciones.png)
+
+**5. Notas de datos**: fuente y moneda original de cada fila del dataset.
+
+![Dashboard - Notas de datos](img/11_dashboard_notas_datos.png)
+
+**6. Precio vs. volumen**: descomposición del crecimiento de ventas 2025 y márgenes promedio por trimestre.
+
+![Dashboard - Precio vs. volumen](img/12_dashboard_precio_volumen.png)
 
 ![Deuda neta](img/04_deuda_neta.png)
 
