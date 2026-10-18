@@ -2,5 +2,6 @@ __pycache__/
 .venv/
 *.pbix.bak
 
-# Nota de seguimiento en Obsidian, no va al repo publico
-Alicorp - Proyecto.md
+# Notas y material de trabajo personal (no forman parte del proyecto publicado)
+*- Proyecto.md
+_privado/
