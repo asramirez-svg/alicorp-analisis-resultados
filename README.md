@@ -44,7 +44,7 @@ Modelo estrella con 3 tablas de hechos (unidades, consolidado, deuda) y 2 dimens
 - participación por unidad;
 - deuda como saldo de cierre.
 
-Guía de construcción: [docs/guia_powerbi.md](docs/guia_powerbi.md) · Archivo: `powerbi/alicorp_dashboard.pbix`
+Documentación técnica: [docs/documentacion_powerbi.md](docs/documentacion_powerbi.md) · Archivo: `powerbi/alicorp_dashboard.pbix`
 
 El dashboard tiene 6 páginas:
 
