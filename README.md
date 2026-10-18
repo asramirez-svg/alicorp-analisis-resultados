@@ -4,7 +4,7 @@ Análisis de los resultados trimestrales de **Alicorp**, la mayor empresa de con
 
 **Herramientas:** Python (pandas, matplotlib) · Excel · Power BI (modelo estrella + DAX)
 
-![Ventas consolidadas](img/01_ventas_consolidadas.png)
+![Alicorp: análisis de resultados 1T24–2T26](img/00_portada.png)
 
 ## Las preguntas de negocio
 1. ¿Las ventas crecen por precio o por volumen?
@@ -19,7 +19,11 @@ Análisis de los resultados trimestrales de **Alicorp**, la mayor empresa de con
 - **Las pérdidas de los 4T son contables, no operativas:** en el 4T25 hubo S/ 283 M de partidas no recurrentes, sobre todo un deterioro de S/ 191 M en Bolivia.
 - **Las adquisiciones suben la deuda:** la deuda neta pasó de S/ 3 090 M a S/ 3 850 M y el apalancamiento de 1,83x a 2,18x.
 
+![Ventas consolidadas](img/01_ventas_consolidadas.png)
+
 ![EBITDA por unidad](img/02_ebitda_por_unidad.png)
+
+![Deuda neta](img/04_deuda_neta.png)
 
 El detalle, con recomendaciones y límites, está en [docs/hallazgos.md](docs/hallazgos.md).
 
@@ -72,8 +76,6 @@ El dashboard tiene 6 páginas:
 
 ![Dashboard - Precio vs. volumen](img/12_dashboard_precio_volumen.png)
 
-![Deuda neta](img/04_deuda_neta.png)
-
 ## Análisis avanzado: ¿por qué crecieron las ventas, y por qué son tan malos los 4T?
 Dos preguntas que el análisis inicial dejaba solo cualitativas, ahora cuantificadas:
 
@@ -98,10 +100,10 @@ python src/04_analisis_avanzado.py   # descomposición precio-volumen + estacion
 ```
 data/raw/fuentes.md        enlaces a cada reporte y a la API del BCRP
 data/processed/            CSV limpios + Excel para Power BI
-src/                       construcción, validación y gráficos
-docs/                      hallazgos y guía de Power BI
-img/                       gráficos
-powerbi/                   dashboard (.pbix y .pdf)
+src/                       construcción, validación, gráficos y análisis avanzado
+docs/                      hallazgos y documentación técnica del dashboard
+img/                       gráficos y capturas del dashboard
+powerbi/                   dashboard de Power BI (.pbix)
 ```
 
 ## Fuentes
