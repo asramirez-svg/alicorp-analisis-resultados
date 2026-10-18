@@ -12,12 +12,23 @@ Análisis de los resultados trimestrales de **Alicorp**, la mayor empresa de con
 3. ¿Por qué la utilidad neta sale negativa en algunos trimestres?
 4. ¿Cómo está cambiando la deuda con las adquisiciones?
 
-## Hallazgos principales
-- **Vende más, pero más barato por kilo:** en 2025 el volumen creció 19 % y las ventas 11 %. El precio promedio bajó de S/ 5,0 a S/ 4,7 por kg porque crecieron más los negocios de alto volumen (alimento acuícola, insumos B2B).
-- **Vitapro fue el motor de 2025:** su EBITDA se duplicó (USD 71 M → 143,5 M) y pasó de aportar 16 % a 29 % del EBITDA del grupo. En 2026 se frena: −11 % en el primer semestre.
-- **Consumo Masivo Perú es el corazón:** aporta casi la mitad del EBITDA, con el mejor margen (≈ 20 %), y se recupera en 2026 (EBITDA +18 % en el primer semestre).
-- **Las pérdidas de los 4T son contables, no operativas:** en el 4T25 hubo S/ 283 M de partidas no recurrentes, sobre todo un deterioro de S/ 191 M en Bolivia.
-- **Las adquisiciones suben la deuda:** la deuda neta pasó de S/ 3 090 M a S/ 3 850 M y el apalancamiento de 1,83x a 2,18x.
+## Respuestas en corto
+| Pregunta | Respuesta |
+|---|---|
+| ¿Precio o volumen? | **Volumen.** En 2025 se vendieron 19 % más toneladas, pero a menor precio promedio por kilo; ninguna unidad creció por subir precios, salvo B2B. |
+| ¿Qué unidad impulsa y cuál frena? | **Vitapro impulsó 2025** (EBITDA ×2) y **Consumo Masivo Perú sostiene el negocio** (casi la mitad del EBITDA). **Negocios Internacionales frena**, por el cambio de tipo de cambio en Bolivia. |
+| ¿Por qué hay utilidad neta negativa? | Por **partidas contables de cierre de año** (deterioros, reestructuración), no por la operación: el EBITDA de esos trimestres es normal. |
+| ¿Cómo cambia la deuda? | **Sube con las adquisiciones:** de 1,83x a 2,18x EBITDA entre dic-24 y jun-26. Manejable, pero en aumento. |
+
+## Hallazgos
+1. **Alicorp vende más toneladas, pero cada tonelada vale menos.** En 2025 las ventas subieron 11 % (S/ 10 598 M → 11 764 M) y el volumen 19 %. El precio promedio bajó de S/ 5,0 a S/ 4,7 por kilo porque crecieron más los negocios de alto volumen y bajo precio por kilo (alimento acuícola de Vitapro, insumos B2B) que los de consumo masivo.
+2. **Vitapro fue el motor de 2025 y en 2026 se frena.** Su EBITDA ajustado se duplicó (USD 71 M → 143,5 M), su margen pasó de 8,8 % a 13,8 % y su peso en el EBITDA del grupo subió de 16 % a 29 %. En el primer semestre de 2026 vende 13 % más toneladas, pero su EBITDA cae 11 %.
+3. **Consumo Masivo Perú es el corazón del negocio.** Aporta 45–52 % del EBITDA con el mejor margen (≈ 20–22 %). En el primer semestre de 2026 se recupera (ventas +10,6 %, EBITDA +17,7 %), en parte por empresas adquiridas como Inka Crops.
+4. **Bolivia: un cambio contable que se ve como una caída.** Desde 2025 Alicorp convierte Bolivia con un tipo de cambio de mercado (NIC 21). Las ventas de Negocios Internacionales caen aunque las toneladas casi no cambien: 2024 y 2025 no son comparables para esa unidad.
+5. **Las pérdidas de los 4T son contables, no operativas.** La utilidad neta fue negativa en el 4T24 (−S/ 108 M) y el 4T25 (−S/ 63 M). En el 4T25 hubo S/ 283 M de partidas no recurrentes, sobre todo un deterioro de S/ 191 M en Bolivia, mientras el EBITDA ajustado se mantuvo estable.
+6. **Las adquisiciones se pagan con deuda.** La deuda financiera neta pasó de S/ 3 090 M (dic-24) a S/ 3 850 M (jun-26), +25 %, y el apalancamiento de 1,83x a 2,18x.
+7. **El crecimiento de 2025 fue casi todo volumen.** En Vitapro (+S/ 678 M) el efecto precio fue −S/ 315 M; en Consumo Masivo Perú (+S/ 151 M), −S/ 140 M. En Negocios Internacionales (−S/ 231 M) el 90 % de la caída es efecto precio. Solo Alicorp Soluciones (B2B) ganó por precio y por volumen a la vez.
+8. **Los cuartos trimestres son sistemáticamente peores en utilidad neta, no en EBITDA.** El margen EBITDA es parejo todo el año (14,8 %–15,7 %), pero el margen neto cae a −2,8 % en promedio en Q4: las partidas no recurrentes promedian S/ 205 M en Q4 frente a S/ 6–18 M en los otros trimestres.
 
 ![Ventas consolidadas](img/01_ventas_consolidadas.png)
 
@@ -25,7 +36,18 @@ Análisis de los resultados trimestrales de **Alicorp**, la mayor empresa de con
 
 ![Deuda neta](img/04_deuda_neta.png)
 
-El detalle, con recomendaciones y límites, está en [docs/hallazgos.md](docs/hallazgos.md).
+## Conclusiones y recomendaciones
+**Conclusión:** Alicorp crece, pero crece vendiendo más volumen y no cobrando más; su ganancia operativa es estable y las caídas de utilidad neta vienen de ajustes contables de fin de año, no del negocio. El riesgo a vigilar es la combinación de un crecimiento dependiente del volumen con una deuda que sube por las adquisiciones.
+
+Qué haría un analista con esto:
+1. Seguir el **margen EBITDA de Vitapro** cada trimestre: es la unidad más volátil y la que más movió el resultado.
+2. Medir el crecimiento de Consumo Masivo Perú **sin las adquisiciones** (orgánico) para saber si las marcas propias crecen solas.
+3. No comparar Negocios Internacionales 2024 con 2025 sin advertir el cambio de tipo de cambio.
+4. Vigilar que la **deuda neta / EBITDA no pase de ~2,5x** mientras se integran las adquisiciones.
+5. Al proyectar un 4T, **presupuestar una partida no recurrente** (promedio histórico ≈ S/ 200 M) en vez de asumir que el EBITDA se traduce directo en utilidad neta.
+6. Antes de celebrar un crecimiento de ventas, **separar precio y volumen**: el crecimiento por volumen es más frágil ante una baja de demanda.
+
+**Límites:** los datos vienen de reportes públicos, no de la contabilidad interna; el 3T25 es derivado (total anual menos los otros trimestres); las cifras en dólares se convirtieron con el tipo de cambio del BCRP, que puede diferir ligeramente del que usa Alicorp. El detalle completo está en [docs/hallazgos.md](docs/hallazgos.md).
 
 ## El reto de los datos (y cómo lo resolví)
 Los reportes no son una base de datos limpia:
