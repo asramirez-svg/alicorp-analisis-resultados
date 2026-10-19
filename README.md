@@ -2,7 +2,7 @@
 
 Análisis de los resultados trimestrales de **Alicorp**, la mayor empresa de consumo masivo del Perú, con datos públicos: sus reportes de resultados y el tipo de cambio del BCRP. Cubre 10 trimestres, del 1T24 al 2T26, y sus 4 unidades de negocio.
 
-**Herramientas:** Python (pandas, matplotlib) · Excel · Power BI (modelo estrella + DAX)
+**Herramientas:** Python (pandas, matplotlib) · SQL (SQLite) · Excel · Power BI (modelo estrella + DAX)
 
 ![Alicorp: análisis de resultados 1T24–2T26](img/00_portada.png)
 
@@ -98,6 +98,42 @@ El dashboard tiene 6 páginas:
 
 ![Dashboard - Precio vs. volumen](img/12_dashboard_precio_volumen.png)
 
+## Consultas SQL
+Además de Python y Power BI, cargué el dataset en una base **SQLite** con el mismo modelo estrella (`sql/schema.sql`: llaves primarias y foráneas, restricciones `CHECK` y una tabla de control con los totales publicados) y respondí cada pregunta de negocio con una consulta:
+
+| Consulta | Pregunta | Técnicas |
+|---|---|---|
+| [`01_variacion_interanual.sql`](sql/01_variacion_interanual.sql) | ¿Cómo cambian las ventas frente al mismo trimestre del año anterior? | `LAG()`, cláusula `WINDOW` |
+| [`02_participacion_ebitda.sql`](sql/02_participacion_ebitda.sql) | ¿Qué unidad aporta más al EBITDA cada año? | `SUM() OVER (PARTITION BY)`, `RANK()` |
+| [`03_ranking_crecimiento.sql`](sql/03_ranking_crecimiento.sql) | ¿Qué unidad creció más en 2025? | agregación condicional (`CASE`), `RANK()` |
+| [`04_precio_volumen.sql`](sql/04_precio_volumen.sql) | ¿Se creció por precio o por volumen? | CTE encadenadas (`WITH`) |
+| [`05_deuda_cierre.sql`](sql/05_deuda_cierre.sql) | ¿Cómo cambia la deuda con las adquisiciones? | subconsulta, saldo de cierre, `LAG()` |
+| [`06_estacionalidad.sql`](sql/06_estacionalidad.sql) | ¿Los 4T son sistemáticamente peores? | `GROUP BY` + `AVG()` |
+| [`07_control_calidad.sql`](sql/07_control_calidad.sql) | ¿Los datos cuadran con lo publicado? | `UNION ALL`, `JOIN` contra tabla de control |
+
+Ejemplo: participación de cada unidad en el EBITDA del grupo, con una función de ventana por año.
+
+```sql
+WITH por_unidad AS (
+    SELECT d.anio, u.unidad, SUM(u.ebitda_ajustado_pen) AS ebitda_pen
+    FROM fact_unidades AS u
+    JOIN dim_trimestre AS d USING (trimestre)
+    GROUP BY d.anio, u.unidad
+)
+SELECT anio, unidad,
+       ROUND(100.0 * ebitda_pen / SUM(ebitda_pen) OVER (PARTITION BY anio), 1) AS participacion_pct,
+       RANK() OVER (PARTITION BY anio ORDER BY ebitda_pen DESC)               AS puesto
+FROM por_unidad
+ORDER BY anio, puesto;
+```
+
+| Año | 1.° | 2.° | 3.° | 4.° |
+|---|---|---|---|---|
+| 2024 | Consumo Masivo Perú 52,4 % | B2B 23,0 % | Vitapro 16,2 % | Neg. Internacionales 8,4 % |
+| 2025 | Consumo Masivo Perú 45,2 % | **Vitapro 28,7 %** | B2B 23,9 % | Neg. Internacionales 2,1 % |
+
+**Validación cruzada:** `src/05_consultas_sql.py` crea la base, corre las 7 consultas y compara sus resultados con los calculados en Python. La descomposición precio-volumen y la estacionalidad coinciden al decimal, y el control de calidad en SQL da 18 de 18 chequeos OK.
+
 ## Análisis avanzado: ¿por qué crecieron las ventas, y por qué son tan malos los 4T?
 Dos preguntas que el análisis inicial dejaba solo cualitativas, ahora cuantificadas:
 
@@ -116,12 +152,15 @@ python src/01_construir_dataset.py   # genera data/processed/*.csv y alicorp_pow
 python src/02_validar.py             # chequea sumas contra los totales publicados
 python src/03_graficos.py            # genera los gráficos de img/
 python src/04_analisis_avanzado.py   # descomposición precio-volumen + estacionalidad
+python src/05_consultas_sql.py       # crea data/alicorp.db, corre las consultas de sql/ y valida contra Python
 ```
 
 ## Estructura
 ```
 data/raw/fuentes.md        enlaces a cada reporte y a la API del BCRP
-data/processed/            CSV limpios + Excel para Power BI
+data/processed/            CSV limpios + Excel para Power BI (y resultados de las consultas en sql/)
+data/alicorp.db            base SQLite con el modelo estrella
+sql/                       esquema y consultas SQL
 src/                       construcción, validación, gráficos y análisis avanzado
 docs/                      hallazgos y documentación técnica del dashboard
 img/                       gráficos y capturas del dashboard
